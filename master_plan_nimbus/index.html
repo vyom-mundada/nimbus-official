@@ -1,0 +1,382 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Nimbus | Our Master Plan</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;family=Manrope:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#2f3639",
+                        "on-background": "#dde3e7",
+                        "surface-tint": "#4cd6ff",
+                        "tertiary-container": "#feb127",
+                        "on-secondary": "#002e69",
+                        "secondary-container": "#4b8eff",
+                        "on-error": "#690005",
+                        "surface-container-low": "#161d1f",
+                        "on-tertiary": "#442b00",
+                        "primary-fixed": "#b7eaff",
+                        "error-container": "#93000a",
+                        "on-error-container": "#ffdad6",
+                        "tertiary": "#ffd59c",
+                        "on-primary-container": "#00566a",
+                        "surface-dim": "#0e1417",
+                        "surface-container-high": "#242b2e",
+                        "surface-container-lowest": "#090f12",
+                        "inverse-surface": "#dde3e7",
+                        "tertiary-fixed": "#ffddb1",
+                        "primary-fixed-dim": "#4cd6ff",
+                        "on-secondary-fixed-variant": "#004493",
+                        "on-secondary-container": "#00285c",
+                        "tertiary-fixed-dim": "#ffba49",
+                        "on-primary": "#003543",
+                        "inverse-on-surface": "#2b3134",
+                        "on-tertiary-container": "#6b4700",
+                        "on-secondary-fixed": "#001a41",
+                        "outline-variant": "#3c494e",
+                        "on-surface-variant": "#bbc9cf",
+                        "error": "#ffb4ab",
+                        "on-primary-fixed": "#001f28",
+                        "surface-container-highest": "#2f3639",
+                        "on-primary-fixed-variant": "#004e60",
+                        "inverse-primary": "#00677f",
+                        "secondary-fixed": "#d8e2ff",
+                        "surface-container": "#1a2123",
+                        "surface-bright": "#333a3d",
+                        "surface": "#0e1417",
+                        "on-tertiary-fixed": "#291800",
+                        "on-tertiary-fixed-variant": "#624000",
+                        "primary-container": "#00d1ff",
+                        "on-surface": "#dde3e7",
+                        "background": "#0e1417",
+                        "secondary-fixed-dim": "#adc6ff",
+                        "secondary": "#adc6ff",
+                        "primary": "#a4e6ff",
+                        "outline": "#859399"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1440px",
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "margin-page": "64px"
+                    },
+                    "fontFamily": {
+                        "body-ui": ["Manrope"],
+                        "body-editorial": ["Newsreader"],
+                        "label-caps": ["Space Grotesk"],
+                        "h1": ["Space Grotesk"],
+                        "h2": ["Space Grotesk"],
+                        "display-lg": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "body-ui": ["16px", {"lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400"}],
+                        "body-editorial": ["20px", {"lineHeight": "1.7", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.15em", "fontWeight": "700"}],
+                        "h1": ["48px", {"lineHeight": "1.2", "letterSpacing": "0.03em", "fontWeight": "600"}],
+                        "h2": ["32px", {"lineHeight": "1.3", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                        "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "0.05em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(10, 15, 26, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid transparent;
+            border-image: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 100%) 1;
+        }
+        .glow-cyan {
+            box-shadow: 0 0 15px rgba(0, 209, 255, 0.1);
+        }
+        .glow-cyan-active:hover {
+            box-shadow: 0 0 20px rgba(0, 209, 255, 0.4);
+        }
+        .text-glow {
+            text-shadow: 0 0 8px rgba(164, 230, 255, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-ui selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-surface/70 backdrop-blur-xl border-b border-white/10 shadow-[0_0_15px_rgba(0,209,255,0.1)]">
+<div class="max-w-container-max mx-auto flex justify-between items-center px-gutter py-4">
+<div class="font-h2 text-h2 font-bold tracking-tighter text-on-surface">Nimbus</div>
+<div class="hidden md:flex gap-8">
+<a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300" href="/">Home</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300" href="/about_nimbus/">About</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1" href="/master_plan_nimbus/">Master Plan</a>
+</div>
+<a class="bg-primary-container text-on-primary-container font-label-caps px-6 py-2 uppercase tracking-widest hover:brightness-110 active:scale-95 transition-all duration-150" href="https://nimbusaiengine.vercel.app/" target="_blank">
+    Launch AI Engine
+</a>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative pt-40 pb-24 md:pt-60 md:pb-40 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-b from-primary/10 to-transparent opacity-30"></div>
+<div class="absolute -top-1/4 -right-1/4 w-[800px] h-[800px] bg-primary-container/10 rounded-full blur-[120px]"></div>
+</div>
+<div class="relative z-10 max-w-4xl mx-auto px-gutter text-center">
+<span class="font-label-caps text-primary uppercase tracking-[0.3em] mb-6 block">The Manifesto</span>
+<h1 class="font-display-lg text-display-lg text-glow mb-8 leading-tight">Nimbus: Our Master Plan</h1>
+<p class="font-body-editorial text-body-editorial text-on-background/80 max-w-2xl mx-auto italic mb-12">
+                "Unlocking access to life’s most essential resource, empowering every community to thrive."
+            </p>
+<div class="flex flex-wrap justify-center gap-6 text-on-surface-variant font-label-caps uppercase tracking-widest text-[10px]">
+<span class="">Yash</span>
+<span class="opacity-30">•</span>
+<span class="">Vyom</span>
+<span class="opacity-30">•</span>
+<span class="">Terrence</span>
+<span class="opacity-30">•</span>
+<span class="">Precious</span>
+<span class="ml-2 text-primary/60">— Founders, Nimbus</span>
+</div>
+</div>
+</header>
+<main class="max-w-4xl mx-auto px-gutter pb-40 space-y-32 relative">
+<!-- Floating atmospheric effect -->
+<div class="fixed top-1/2 left-0 w-full h-1 bg-primary/5 blur-3xl -z-10 transform -rotate-12"></div>
+<!-- P1 Introduction -->
+<div class="mb-20 text-center">
+    <a href="https://medium.com/@vyommundada/nimbus-our-master-plan-822a01dbcb4e" target="_blank" class="group inline-flex items-center gap-3 font-label-caps text-[11px] tracking-[0.2em] text-primary/80 hover:text-primary transition-all duration-300 border-b border-primary/20 hover:border-primary/60 pb-1 uppercase">
+        <span class="">Read the full whitepaper on Medium</span>
+        <span class="material-symbols-outlined text-[14px] transform group-hover:translate-x-1 transition-transform">arrow_forward</span>
+    </a>
+</div><section class="relative" id="p1">
+<div class="flex items-baseline gap-4 mb-10">
+<span class="font-label-caps text-primary text-h2 opacity-20">01</span>
+<h2 class="font-h1 text-h1 text-on-surface">P1 — Introduction</h2>
+</div>
+<div class="font-body-editorial text-body-editorial space-y-8 leading-relaxed text-on-background/90">
+<p class="">We want to be honest with you about something most climate companies won't say out loud.</p>
+<p class="">The water crisis is not a resource problem. Earth has more than enough water. The atmosphere alone holds <span class="text-primary font-medium">12.9 quadrillion litres</span> of it, distributed evenly, perpetually replenished, present above every city, village, and desert on the planet. The water exists. The problem is that we've never been able to reach it.</p>
+<div class="glass-panel p-8 my-12 border-l-4 border-l-primary">
+<p class="italic text-on-surface">For a century, our entire model of water infrastructure has been built around geography. You need to be near a river. Near a coastline. Near an aquifer that hasn't been drained yet. If you're not, you wait. You walk kilometres. Your children get sick, and miss school.</p>
+</div>
+<p class="">2.1 billion people are still waiting. Not because the water isn't there, but because nobody has built the machine to take it from something everyone has available: the air.</p>
+<p class="font-semibold text-primary-fixed">That machine exists now. We're building it.</p>
+</div>
+</section>
+<!-- P2 The Science -->
+<section id="p2">
+<div class="flex items-baseline gap-4 mb-10">
+<span class="font-label-caps text-primary text-h2 opacity-20">02</span>
+<h2 class="font-h1 text-h1 text-on-surface">P2 — The Science that Changes Everything</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+<div class="md:col-span-7 font-body-editorial text-body-editorial space-y-6">
+<p class="">In the late 1990s, a chemist named Omar Yaghi at UC Berkeley began engineering a new class of materials he called <span class="text-primary-fixed font-bold">Metal-Organic Frameworks (MOFs)</span>.</p>
+<p class="">The idea was deceptively simple: build crystalline, nanoporous structures whose geometry you could tune at the atomic level, creating materials with surface areas larger than a football field, packed into a single gram of powder.</p>
+<p class="">For two decades, MOFs lived in academia. Then researchers asked a different question: what if you designed a MOF whose pores were sized exactly right to trap water molecules from air, even desert air at 10% humidity, and then release them as liquid with only gentle heat?</p>
+</div>
+<aside class="md:col-span-5 glass-panel p-6 space-y-4">
+<div class="text-primary font-label-caps text-[10px] tracking-widest mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">science</span>
+                        TECHNICAL SPECIFICATIONS
+                    </div>
+<div class="space-y-4">
+<div>
+<div class="text-on-surface-variant text-[10px] uppercase font-bold">Material: MOF-303</div>
+<div class="text-h2 font-h2 text-primary leading-tight">0.7 - 1.0 <span class="text-body-ui font-normal opacity-60">L/kg/day</span></div>
+</div>
+<div>
+<div class="text-on-surface-variant text-[10px] uppercase font-bold">Activation Threshold</div>
+<div class="text-h2 font-h2 text-primary leading-tight">10% <span class="text-body-ui font-normal opacity-60">Relative Humidity</span></div>
+</div>
+<div>
+<div class="text-on-surface-variant text-[10px] uppercase font-bold">Regeneration Temp</div>
+<div class="text-h2 font-h2 text-primary leading-tight">60–80°C <span class="text-body-ui font-normal opacity-60">Solar Thermal</span></div>
+</div>
+</div>
+</aside>
+</div>
+<div class="mt-8 font-body-editorial text-body-editorial">
+<p class="">In October 2025, <span class="border-b border-primary/40 pb-1">Omar Yaghi was awarded the Nobel Prize in Chemistry</span>. The science is done. What remains is engineering and will.</p>
+</div>
+</section>
+<!-- P3 What We're Building -->
+<section class="space-y-12" id="p3">
+<div class="flex items-baseline gap-4">
+<span class="font-label-caps text-primary text-h2 opacity-20">03</span>
+<h2 class="font-h1 text-h1 text-on-surface">P3 — What We’re Building</h2>
+</div>
+<div class="relative rounded-lg overflow-hidden h-[400px]">
+<img alt="Nimbus Deployment" class="w-full h-full object-cover grayscale contrast-125 opacity-40" data-alt="A cinematic, low-angle shot of a modular, matte-navy blue industrial water harvesting unit standing in a vast, arid desert landscape at twilight. The unit features glowing cyan instrumentation panels and sleek, aerodynamic intake vents. The sky is a deep indigo with a faint hint of sunset on the horizon, creating a high-contrast, scientific infrastructure aesthetic that emphasizes precision and robustness." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbnTmM31cpr1hYQ_-TezbuoiYfCwkxtZ7AwbamEBa5N190LSptTdg1NvjTDENEk_28vDGrwU3rOVBylA9IpY5R1_0EwPwiNLS4algCUYNUK9WtNosyYFlbgm6mtF1PtM1CGI5XL-JpJ_Vs3KDXXuaANz64hS5OGFoFhM0Mp_vEW2C7WgDHPo2rKr7HEhuebahVacDRBs1Y_NrJ4rs58HR2nQLCqm6PFrJfq3NTyRSpm_yi8HoD0T-bFlMkCi9IkKjrYAyluTMBuuU">
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="absolute bottom-8 left-8 max-w-md">
+<div class="bg-primary/20 backdrop-blur-md p-4 border-l-2 border-primary">
+<p class="text-sm font-medium text-white italic">"Hardware is commodity. Intelligence is moat."</p>
+</div>
+</div>
+</div>
+<div class="font-body-editorial text-body-editorial space-y-6">
+<p class="">Nimbus builds modular atmospheric water harvesting units that ship in containers, deploy in 24 hours, and produce up to <span class="text-primary-fixed">5,000 litres of clean water per day</span> using air and sunlight.</p>
+<p class="">But the device is not the company. The intelligence layer is. We built an AI-driven MOF selection engine that:</p>
+<ul class="space-y-4 pt-4">
+<li class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-primary mt-1">location_on</span>
+<span class="">Ingests GPS + climate data</span>
+</li>
+<li class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-primary mt-1">query_stats</span>
+<span class="">Maps humidity, temperature, irradiance</span>
+</li>
+<li class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-primary mt-1">hub</span>
+<span class="">Matches against MOF performance curves</span>
+</li>
+<li class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-primary mt-1">precision_manufacturing</span>
+<span class="">Outputs optimal configuration per location</span>
+</li>
+</ul>
+<p class="pt-6">Post-deployment IoT data continuously improves system performance. Hardware is commodity. Intelligence is moat.</p>
+</div>
+</section>
+<!-- P4 The Market - Bento Grid -->
+<section id="p4">
+<div class="flex items-baseline gap-4 mb-10">
+<span class="font-label-caps text-primary text-h2 opacity-20">04</span>
+<h2 class="font-h1 text-h1 text-on-surface">P4 — The Market</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="md:col-span-3 glass-panel p-8 glow-cyan">
+<p class="font-body-editorial text-body-editorial mb-4">The atmospheric water generation market is $2.69B today, projected to <span class="text-primary font-bold">$6.82B by 2035</span>. But most companies target wealthy buyers. We target the 2.1 billion people without water access.</p>
+</div>
+<div class="glass-panel p-6 flex flex-col justify-between hover:bg-surface-container-high transition-colors group">
+<span class="font-label-caps text-primary/40 mb-8">MODEL 01</span>
+<h3 class="text-h2 font-h2 mb-2 group-hover:text-primary transition-colors">Hardware Sales</h3>
+<p class="text-on-surface-variant text-sm">$8K–$50K units for NGOs, governments, and military operations.</p>
+</div>
+<div class="glass-panel p-6 flex flex-col justify-between hover:bg-surface-container-high transition-colors group border-t-primary/30">
+<span class="font-label-caps text-primary/40 mb-8">MODEL 02</span>
+<h3 class="text-h2 font-h2 mb-2 group-hover:text-primary transition-colors">WaaS</h3>
+<p class="text-on-surface-variant text-sm">Water-as-a-Service model generating clean water at $0.01–$0.03 per litre.</p>
+</div>
+<div class="glass-panel p-6 flex flex-col justify-between hover:bg-surface-container-high transition-colors group">
+<span class="font-label-caps text-primary/40 mb-8">MODEL 03</span>
+<h3 class="text-h2 font-h2 mb-2 group-hover:text-primary transition-colors">Licensing</h3>
+<p class="text-on-surface-variant text-sm">Platform licensing of our proprietary AI MOF optimization SaaS layer.</p>
+</div>
+</div>
+</section>
+<!-- P5 Why Now -->
+<section class="bg-surface-container-lowest glass-panel p-12 border-none" id="p5">
+<div class="flex items-baseline gap-4 mb-10">
+<span class="font-label-caps text-primary text-h2 opacity-20">05</span>
+<h2 class="font-h1 text-h1 text-on-surface">P5 — Why Now</h2>
+</div>
+<div class="space-y-4 font-body-ui text-body-ui">
+<div class="flex items-center gap-6 py-4 border-b border-white/5">
+<span class="text-primary font-h2">1</span>
+<span class="text-xl">MOFs are newly commercial</span>
+</div>
+<div class="flex items-center gap-6 py-4 border-b border-white/5">
+<span class="text-primary font-h2">2</span>
+<span class="text-xl">Costs are still falling</span>
+</div>
+<div class="flex items-center gap-6 py-4 border-b border-white/5">
+<span class="text-primary font-h2">3</span>
+<span class="text-xl">Optimization problem is unsolved</span>
+</div>
+<div class="flex items-center gap-6 py-4 border-b border-white/5">
+<span class="text-primary font-h2">4</span>
+<span class="text-xl">Water infrastructure is politically avoided</span>
+</div>
+<div class="flex items-center gap-6 py-4">
+<span class="text-primary font-h2">5</span>
+<span class="text-xl">No one owns the software layer</span>
+</div>
+</div>
+</section>
+<!-- P6 Roadmap -->
+<section id="p6">
+<div class="flex items-baseline gap-4 mb-10">
+<span class="font-label-caps text-primary text-h2 opacity-20">06</span>
+<h2 class="font-h1 text-h1 text-on-surface">P6 — Roadmap</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+<div class="glass-panel p-6 border-b-2 border-b-primary/50">
+<div class="text-[10px] font-label-caps text-on-surface-variant mb-4">PHASE 01</div>
+<div class="font-bold text-lg mb-2">Field Validation</div>
+<div class="text-xs text-on-surface-variant">Deployment of initial 5 units across diverse climates.</div>
+</div>
+<div class="glass-panel p-6">
+<div class="text-[10px] font-label-caps text-on-surface-variant mb-4">PHASE 02</div>
+<div class="font-bold text-lg mb-2">Cost Reduction</div>
+<div class="text-xs text-on-surface-variant">Optimization of production to reach &lt;$2/g MOF cost.</div>
+</div>
+<div class="glass-panel p-6">
+<div class="text-[10px] font-label-caps text-on-surface-variant mb-4">PHASE 03</div>
+<div class="font-bold text-lg mb-2">Scale Licensing</div>
+<div class="text-xs text-on-surface-variant">Global deployment and AI optimization SaaS launch.</div>
+</div>
+<div class="glass-panel p-6">
+<div class="text-[10px] font-label-caps text-on-surface-variant mb-4">PHASE 04</div>
+<div class="font-bold text-lg mb-2">Global Infra</div>
+<div class="text-xs text-on-surface-variant">Establishment of decentralized water access globally.</div>
+</div>
+</div>
+</section>
+<!-- P7 Closing -->
+<section class="text-center py-20 border-t border-white/10" id="p7">
+<div class="font-label-caps text-primary uppercase tracking-[0.4em] mb-12">Conclusion</div>
+<div class="font-h1 text-h1 space-y-4 max-w-2xl mx-auto leading-tight">
+<p class="">Water stress is accelerating globally.</p>
+<p class="">The atmosphere already contains enough water to solve it.</p>
+<p class="">The science exists.</p>
+<p class="">The business model exists.</p>
+</div>
+<div class="mt-16 space-y-6">
+<p class="font-body-editorial italic text-2xl">The only question is execution speed.</p>
+<p class="font-display-lg text-primary text-glow">We intend to move.</p>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-white/5 py-12">
+<div class="max-w-container-max mx-auto px-margin-page grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="md:col-span-1">
+<div class="font-h2 text-h2 font-bold text-on-surface mb-4">Nimbus</div>
+<p class="text-on-surface-variant font-label-caps text-[10px] uppercase tracking-widest leading-loose">
+                    Infrastructure for a <br> water-abundant future.
+                </p>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-caps text-[10px] text-primary tracking-widest mb-2">RESOURCES</span>
+<a class="text-on-surface-variant hover:text-surface-tint transition-colors font-label-caps text-[12px] uppercase" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-surface-tint transition-colors font-label-caps text-[12px] uppercase" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-caps text-[10px] text-primary tracking-widest mb-2">NETWORK</span>
+<a class="text-on-surface-variant hover:text-surface-tint transition-colors font-label-caps text-[12px] uppercase" href="#">Status</a>
+<a class="text-on-surface-variant hover:text-surface-tint transition-colors font-label-caps text-[12px] uppercase" href="#">Network</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-caps text-[10px] text-primary tracking-widest mb-2">GET IN TOUCH</span>
+<a class="text-on-surface-variant hover:text-surface-tint transition-colors font-label-caps text-[12px] uppercase" href="#">Contact</a>
+<p class="text-[10px] text-on-surface-variant/50 mt-4 leading-relaxed font-label-caps">
+                    © 2024 NIMBUS INFRASTRUCTURE GROUP. ALL RIGHTS RESERVED.
+                </p>
+</div>
+</div>
+</footer>
+
+
+</body></html>
