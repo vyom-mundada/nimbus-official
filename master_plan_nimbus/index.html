@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nimbus | Our Master Plan</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Manrope', sans-serif;
+      background: #f7fafc;
+      color: #0f172a;
+      overflow-x: hidden;
+    }
+
+    .hero-glow {
+      position: absolute;
+      width: 700px;
+      height: 700px;
+      border-radius: 9999px;
+      background: radial-gradient(circle, rgba(59,130,246,0.18) 0%, rgba(59,130,246,0) 70%);
+      filter: blur(60px);
+      z-index: 0;
+    }
+
+    .glass {
+      background: rgba(255,255,255,0.7);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.7);
+      box-shadow:
+        0 10px 40px rgba(15,23,42,0.06),
+        inset 0 1px 0 rgba(255,255,255,0.8);
+    }
+
+    .section-title {
+      letter-spacing: -0.03em;
+    }
+
+    .fade-line {
+      background: linear-gradient(to right, transparent, rgba(59,130,246,0.3), transparent);
+      height: 1px;
+      width: 100%;
+    }
+
+    .nav-blur {
+      background: rgba(255,255,255,0.75);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(15,23,42,0.06);
+    }
+
+    .soft-shadow {
+      box-shadow: 0 12px 50px rgba(15,23,42,0.08);
+    }
+
+    .hero-text {
+      letter-spacing: -0.05em;
+    }
+
+    .grid-card {
+      transition: all 0.25s ease;
+    }
+
+    .grid-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 60px rgba(15,23,42,0.10);
+    }
+
+    .hero-text {
+        font-family: 'Space Grotesk', sans-serif;
+    }
+
+    .section-title {
+        font-family: 'Space Grotesk', sans-serif;
+    }
+
+    h1, h2, h3, h4, .font-display {
+        font-family: 'Space Grotesk', sans-serif;
+    }
+
+    .hero-quote,
+    .editorial-text {
+        font-family: 'Newsreader', serif;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 left-0 w-full z-50 nav-blur">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
+
+      <a href="/" class="text-2xl font-extrabold tracking-tight">
+        Nimbus
+      </a>
+
+      <div class="hidden md:flex items-center gap-10 text-sm font-medium">
+        <a href="/" class="text-slate-500 hover:text-slate-900 transition">Home</a>
+        <a href="/about_nimbus/" class="text-slate-500 hover:text-slate-900 transition">About</a>
+        <a href="/master_plan_nimbus/" class="text-blue-600 font-semibold">Master Plan</a>
+      </div>
+
+      <a href="https://nimbusaiengine.vercel.app/" target="_blank"
+        class="px-5 py-2.5 rounded-full bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700 transition">
+        Launch AI Engine
+      </a>
+
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="relative overflow-hidden pt-44 pb-32">
+
+    <div class="hero-glow -top-40 -left-40 absolute"></div>
+    <div class="hero-glow top-0 right-0 absolute"></div>
+
+    <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
+
+      <p class="uppercase tracking-[0.35em] text-blue-600 text-xs font-bold mb-6">
+        The Manifesto
+      </p>
+
+      <h1 class="hero-text text-6xl md:text-8xl font-black leading-none mb-10">
+        Nimbus: Our Master Plan
+      </h1>
+
+      <p class="hero-quote text-2xl md:text-3xl text-slate-500 font-light italic max-w-4xl mx-auto leading-relaxed">
+        "Unlocking access to life’s most essential resource, empowering every community to thrive."
+      </p>
+
+      <div class="mt-12 flex justify-center items-center gap-4 flex-wrap text-sm uppercase tracking-[0.25em] text-slate-400">
+        <span>Yash</span>
+        <span>•</span>
+        <span>Vyom</span>
+        <span>•</span>
+        <span>Terrence</span>
+        <span>•</span>
+        <span>Precious</span>
+        <span class="text-blue-600">— Founders, Nimbus</span>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="max-w-5xl mx-auto px-6 pb-40">
+
+    <!-- MEDIUM LINK -->
+    <div class="text-center mb-28">
+      <a href="https://medium.com/@vyommundada/nimbus-our-master-plan-822a01dbcb4e"
+        target="_blank"
+        class="inline-flex items-center gap-3 text-blue-600 font-semibold tracking-wide hover:gap-4 transition-all">
+        Read the full whitepaper on Medium →
+      </a>
+    </div>
+
+    <!-- P1 -->
+    <section id="p1" class="mb-36">
+
+      <div class="flex items-end gap-5 mb-10">
+        <span class="text-5xl font-black text-blue-100">01</span>
+        <h2 class="section-title text-4xl md:text-5xl font-black">
+          P1 — Introduction
+        </h2>
+      </div>
+
+      <div class="editorial-text space-y-8 text-xl leading-relaxed text-slate-700">
+
+        <p>
+          We want to be honest with you about something most climate companies won't say out loud.
+        </p>
+
+        <p>
+          The water crisis is not a resource problem. Earth has more than enough water. The atmosphere alone holds <span class="text-blue-600 font-semibold">12.9 quadrillion litres</span> of it, distributed evenly, perpetually replenished, present above every city, village, and desert on the planet. The water exists. The problem is that we've never been able to reach it.
+        </p>
+
+        <div class="glass rounded-3xl p-10 border-l-4 border-blue-600">
+          <p class="italic text-slate-700 leading-relaxed">
+            For a century, our entire model of water infrastructure has been built around geography. You need to be near a river. Near a coastline. Near an aquifer that hasn't been drained yet. If you're not, you wait. You walk kilometres. Your children get sick, and miss school.
+          </p>
+        </div>
+
+        <p>
+          2.1 billion people are still waiting. Not because the water isn't there, but because nobody has built the machine to take it from something everyone has available: the air.
+        </p>
+
+        <p class="font-bold text-blue-600">
+          That machine exists now. We're building it.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- P2 -->
+    <section id="p2" class="mb-36">
+
+      <div class="flex items-end gap-5 mb-10">
+        <span class="text-5xl font-black text-blue-100">02</span>
+        <h2 class="section-title text-4xl md:text-5xl font-black">
+          P2 — The Science that Changes Everything
+        </h2>
+      </div>
+
+      <div class="grid lg:grid-cols-12 gap-10 items-start">
+
+        <div class="lg:col-span-7 space-y-7 text-xl leading-relaxed text-slate-700">
+
+          <p>
+            In the late 1990s, a chemist named Omar Yaghi at UC Berkeley began engineering a new class of materials he called <span class="text-blue-600 font-bold">Metal-Organic Frameworks (MOFs)</span>.
+          </p>
+
+          <p>
+            The idea was deceptively simple: build crystalline, nanoporous structures whose geometry you could tune at the atomic level, creating materials with surface areas larger than a football field, packed into a single gram of powder.
+          </p>
+
+          <p>
+            For two decades, MOFs lived in academia. Then researchers asked a different question: what if you designed a MOF whose pores were sized exactly right to trap water molecules from air, even desert air at 10% humidity, and then release them as liquid with only gentle heat?
+          </p>
+
+        </div>
+
+        <aside class="lg:col-span-5 glass rounded-3xl p-8 soft-shadow">
+
+          <div class="uppercase tracking-[0.2em] text-xs font-bold text-blue-600 mb-8">
+            Technical Specifications
+          </div>
+
+          <div class="space-y-8">
+
+            <div>
+              <div class="text-xs uppercase text-slate-400 mb-2">
+                Material: MOF-303
+              </div>
+              <div class="text-4xl font-black">
+                0.7 - 1.0
+                <span class="text-lg text-slate-400 font-medium">L/kg/day</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="text-xs uppercase text-slate-400 mb-2">
+                Activation Threshold
+              </div>
+              <div class="text-4xl font-black">
+                10%
+                <span class="text-lg text-slate-400 font-medium">Relative Humidity</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="text-xs uppercase text-slate-400 mb-2">
+                Regeneration Temp
+              </div>
+              <div class="text-4xl font-black">
+                60–80°C
+                <span class="text-lg text-slate-400 font-medium">Solar Thermal</span>
+              </div>
+            </div>
+
+          </div>
+
+        </aside>
+
+      </div>
+
+      <div class="mt-10 text-xl text-slate-700 leading-relaxed">
+        <p>
+          In October 2025, <span class="border-b border-blue-300">Omar Yaghi was awarded the Nobel Prize in Chemistry</span>. The science is done. What remains is engineering and will.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- P3 -->
+    <section id="p3" class="mb-36">
+
+      <div class="flex items-end gap-5 mb-10">
+        <span class="text-5xl font-black text-blue-100">03</span>
+        <h2 class="section-title text-4xl md:text-5xl font-black">
+          P3 — What We’re Building
+        </h2>
+      </div>
+
+      <div class="relative overflow-hidden rounded-[32px] mb-12 soft-shadow">
+
+        <img
+          src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop"
+          class="w-full h-[450px] object-cover"
+        />
+
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+
+        <div class="absolute bottom-8 left-8 glass rounded-2xl px-6 py-4 max-w-md">
+          <p class="italic text-slate-800">
+            "Hardware is commodity. Intelligence is moat."
+          </p>
+        </div>
+
+      </div>
+
+      <div class="space-y-7 text-xl leading-relaxed text-slate-700">
+
+        <p>
+          Nimbus builds modular atmospheric water harvesting units that ship in containers, deploy in 24 hours, and produce up to <span class="text-blue-600 font-semibold">5,000 litres of clean water per day</span> using air and sunlight.
+        </p>
+
+        <p>
+          But the device is not the company. The intelligence layer is. We built an AI-driven MOF selection engine that:
+        </p>
+
+        <ul class="space-y-5 pt-2">
+
+          <li>• Ingests GPS + climate data</li>
+          <li>• Maps humidity, temperature, irradiance</li>
+          <li>• Matches against MOF performance curves</li>
+          <li>• Outputs optimal configuration per location</li>
+
+        </ul>
+
+        <p>
+          Post-deployment IoT data continuously improves system performance. Hardware is commodity. Intelligence is moat.
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- P4 -->
+    <section id="p4" class="mb-36">
+
+      <div class="flex items-end gap-5 mb-10">
+        <span class="text-5xl font-black text-blue-100">04</span>
+        <h2 class="section-title text-4xl md:text-5xl font-black">
+          P4 — The Market
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <div class="glass rounded-3xl p-10 md:col-span-3">
+          <p class="text-xl leading-relaxed text-slate-700">
+            The atmospheric water generation market is $2.69B today, projected to <span class="text-blue-600 font-bold">$6.82B by 2035</span>. But most companies target wealthy buyers. We target the 2.1 billion people without water access.
+          </p>
+        </div>
+
+        <div class="glass rounded-3xl p-8 grid-card">
+          <div class="text-xs uppercase tracking-[0.2em] text-blue-400 font-bold mb-8">
+            Model 01
+          </div>
+
+          <h3 class="text-3xl font-black mb-4">
+            Hardware Sales
+          </h3>
+
+          <p class="text-slate-600 leading-relaxed">
+            $8K–$50K units for NGOs, governments, and military operations.
+          </p>
+        </div>
+
+        <div class="glass rounded-3xl p-8 grid-card">
+          <div class="text-xs uppercase tracking-[0.2em] text-blue-400 font-bold mb-8">
+            Model 02
+          </div>
+
+          <h3 class="text-3xl font-black mb-4">
+            WaaS
+          </h3>
+
+          <p class="text-slate-600 leading-relaxed">
+            Water-as-a-Service model generating clean water at $0.01–$0.03 per litre.
+          </p>
+        </div>
+
+        <div class="glass rounded-3xl p-8 grid-card">
+          <div class="text-xs uppercase tracking-[0.2em] text-blue-400 font-bold mb-8">
+            Model 03
+          </div>
+
+          <h3 class="text-3xl font-black mb-4">
+            Licensing
+          </h3>
+
+          <p class="text-slate-600 leading-relaxed">
+            Platform licensing of our proprietary AI MOF optimization SaaS layer.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- P5 -->
+    <section id="p5" class="mb-36 glass rounded-[40px] p-12">
+
+      <div class="flex items-end gap-5 mb-12">
+        <span class="text-5xl font-black text-blue-100">05</span>
+        <h2 class="section-title text-4xl md:text-5xl font-black">
+          P5 — Why Now
+        </h2>
+      </div>
+
+      <div class="space-y-6 text-2xl">
+
+        <div class="flex gap-6 border-b border-slate-200 pb-5">
+          <span class="text-blue-600 font-black">1</span>
+          <span>MOFs are newly commercial</span>
+        </div>
+
+        <div class="flex gap-6 border-b border-slate-200 pb-5">
+          <span class="text-blue-600 font-black">2</span>
+          <span>Costs are still falling</span>
+        </div>
+
+        <div class="flex gap-6 border-b border-slate-200 pb-5">
+          <span class="text-blue-600 font-black">3</span>
+          <span>Optimization problem is unsolved</span>
+        </div>
+
+        <div class="flex gap-6 border-b border-slate-200 pb-5">
+          <span class="text-blue-600 font-black">4</span>
+          <span>Water infrastructure is politically avoided</span>
+        </div>
+
+        <div class="flex gap-6">
+          <span class="text-blue-600 font-black">5</span>
+          <span>No one owns the software layer</span>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- P6 -->
+    <section id="p6" class="mb-36">
+
+      <div class="flex items-end gap-5 mb-10">
+        <span class="text-5xl font-black text-blue-100">06</span>
+        <h2 class="section-title text-4xl md:text-5xl font-black">
+          P6 — Roadmap
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-4 gap-6">
+
+        <div class="glass rounded-3xl p-8">
+          <div class="text-xs uppercase tracking-[0.2em] text-blue-400 font-bold mb-6">
+            Phase 01
+          </div>
+
+          <h3 class="text-2xl font-black mb-4">
+            Field Validation
+          </h3>
+
+          <p class="text-slate-600">
+            Deployment of initial 5 units across diverse climates.
+          </p>
+        </div>
+
+        <div class="glass rounded-3xl p-8">
+          <div class="text-xs uppercase tracking-[0.2em] text-blue-400 font-bold mb-6">
+            Phase 02
+          </div>
+
+          <h3 class="text-2xl font-black mb-4">
+            Cost Reduction
+          </h3>
+
+          <p class="text-slate-600">
+            Optimization of production to reach &lt;$2/g MOF cost.
+          </p>
+        </div>
+
+        <div class="glass rounded-3xl p-8">
+          <div class="text-xs uppercase tracking-[0.2em] text-blue-400 font-bold mb-6">
+            Phase 03
+          </div>
+
+          <h3 class="text-2xl font-black mb-4">
+            Scale Licensing
+          </h3>
+
+          <p class="text-slate-600">
+            Global deployment and AI optimization SaaS launch.
+          </p>
+        </div>
+
+        <div class="glass rounded-3xl p-8">
+          <div class="text-xs uppercase tracking-[0.2em] text-blue-400 font-bold mb-6">
+            Phase 04
+          </div>
+
+          <h3 class="text-2xl font-black mb-4">
+            Global Infra
+          </h3>
+
+          <p class="text-slate-600">
+            Establishment of decentralized water access globally.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- P7 -->
+    <section id="p7" class="text-center py-20">
+
+      <p class="uppercase tracking-[0.4em] text-blue-600 text-xs font-bold mb-12">
+        Conclusion
+      </p>
+
+      <div class="space-y-5 text-4xl md:text-5xl font-black leading-tight max-w-4xl mx-auto">
+
+        <p>Water stress is accelerating globally.</p>
+        <p>The atmosphere already contains enough water to solve it.</p>
+        <p>The science exists.</p>
+        <p>The business model exists.</p>
+
+      </div>
+
+      <div class="mt-20">
+
+        <p class="italic text-3xl text-slate-500 mb-8">
+          The only question is execution speed.
+        </p>
+
+        <h3 class="text-6xl md:text-7xl font-black text-blue-600 hero-text">
+          We intend to move.
+        </h3>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-200 py-16 bg-white">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 grid md:grid-cols-4 gap-10">
+
+      <div>
+        <div class="text-3xl font-black mb-4">
+          Nimbus
+        </div>
+
+        <p class="text-slate-500 leading-relaxed">
+          Infrastructure for a water-abundant future.
+        </p>
+      </div>
+
+      <div>
+        <div class="uppercase tracking-[0.2em] text-xs font-bold text-blue-600 mb-5">
+          Resources
+        </div>
+
+        <div class="space-y-3 text-slate-500">
+          <a href="#" class="block hover:text-slate-900 transition">Privacy Policy</a>
+          <a href="#" class="block hover:text-slate-900 transition">Terms of Service</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="uppercase tracking-[0.2em] text-xs font-bold text-blue-600 mb-5">
+          Network
+        </div>
+
+        <div class="space-y-3 text-slate-500">
+          <a href="#" class="block hover:text-slate-900 transition">Status</a>
+          <a href="#" class="block hover:text-slate-900 transition">Network</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="uppercase tracking-[0.2em] text-xs font-bold text-blue-600 mb-5">
+          Get In Touch
+        </div>
+
+        <div class="space-y-3 text-slate-500">
+          <a href="#" class="block hover:text-slate-900 transition">Contact</a>
+        </div>
+
+        <p class="text-xs text-slate-400 mt-8">
+          © 2026 NIMBUS INFRASTRUCTURE GROUP. ALL RIGHTS RESERVED.
+        </p>
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
