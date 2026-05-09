@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Nimbus | Water Access for Every Human</title>
+
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;700&family=Newsreader:opsz,wght@6..72,200..800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+<script id="tailwind-config">
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "surface-variant": "#d9e3e8",
+        "on-background": "#142028",
+        "surface-tint": "#00aee6",
+        "tertiary-container": "#ffd37a",
+        "on-secondary": "#ffffff",
+        "secondary-container": "#d9ebff",
+        "on-error": "#ffffff",
+        "surface-container-low": "#f4f8fb",
+        "on-tertiary": "#4d3200",
+        "primary-fixed": "#dff7ff",
+        "error-container": "#ffdad6",
+        "on-error-container": "#410002",
+        "tertiary": "#8a5a00",
+        "on-primary-container": "#003847",
+        "surface-dim": "#edf3f7",
+        "surface-container-high": "#e7eef3",
+        "surface-container-lowest": "#ffffff",
+        "inverse-surface": "#1e2a31",
+        "tertiary-fixed": "#ffe2b7",
+        "primary-fixed-dim": "#84dfff",
+        "on-secondary-fixed-variant": "#23486b",
+        "on-secondary-container": "#163654",
+        "tertiary-fixed-dim": "#ffc85a",
+        "on-primary": "#ffffff",
+        "inverse-on-surface": "#f2f7fa",
+        "on-tertiary-container": "#6e4700",
+        "on-secondary-fixed": "#10253a",
+        "outline-variant": "#c7d3da",
+        "on-surface-variant": "#5b6972",
+        "error": "#ba1a1a",
+        "on-primary-fixed": "#001f28",
+        "surface-container-highest": "#dde7ed",
+        "on-primary-fixed-variant": "#005d75",
+        "inverse-primary": "#7adfff",
+        "secondary-fixed": "#eaf2ff",
+        "surface-container": "#eef4f8",
+        "surface-bright": "#ffffff",
+        "surface": "#f7fbfd",
+        "on-tertiary-fixed": "#291800",
+        "on-tertiary-fixed-variant": "#6a4300",
+        "primary-container": "#00c8ff",
+        "on-surface": "#142028",
+        "background": "#f7fbfd",
+        "secondary-fixed-dim": "#bfd8ff",
+        "secondary": "#4a89d9",
+        "primary": "#009fd1",
+        "outline": "#92a3ad"
+      },
+
+      borderRadius: {
+        "DEFAULT": "0.125rem",
+        "lg": "0.25rem",
+        "xl": "0.5rem",
+        "full": "0.75rem"
+      },
+
+      spacing: {
+        "container-max": "1440px",
+        "gutter": "24px",
+        "unit": "8px",
+        "margin-page": "64px"
+      },
+
+      fontFamily: {
+        "body-ui": ["Manrope"],
+        "body-editorial": ["Newsreader"],
+        "label-caps": ["Space Grotesk"],
+        "h1": ["Space Grotesk"],
+        "h2": ["Space Grotesk"],
+        "display-lg": ["Space Grotesk"]
+      },
+
+      fontSize: {
+        "body-ui": ["16px", {"lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400"}],
+        "body-editorial": ["20px", {"lineHeight": "1.7", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.15em", "fontWeight": "700"}],
+        "h1": ["48px", {"lineHeight": "1.2", "letterSpacing": "0.03em", "fontWeight": "600"}],
+        "h2": ["32px", {"lineHeight": "1.3", "letterSpacing": "0.02em", "fontWeight": "500"}],
+        "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "0.05em", "fontWeight": "700"}]
+      }
+    }
+  }
+}
+</script>
+
+<style>
+
+body {
+  background-color: #f7fbfd;
+  color: #142028;
+  -webkit-font-smoothing: antialiased;
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(24px);
+  border: 1px solid rgba(255,255,255,0.7);
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.05),
+    0 1px 2px rgba(0,0,0,0.04);
+}
+
+.glow-hover:hover {
+  box-shadow:
+    0 10px 30px rgba(0, 170, 220, 0.18);
+}
+
+.atmospheric-bg {
+  background:
+    radial-gradient(circle at 50% 50%,
+    rgba(0, 200, 255, 0.08) 0%,
+    rgba(247, 251, 253, 1) 75%);
+}
+
+.text-glow {
+  text-shadow: 0 0 12px rgba(0,180,255,0.12);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+</style>
+</head>
+
+<body class="font-body-ui">
+
+<div class="fixed inset-0 pointer-events-none opacity-[0.035] mix-blend-multiply z-[999]">
+  <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
+</div>
+
+<header class="fixed top-0 left-0 w-full z-50 bg-white/70 backdrop-blur-xl border-b border-black/5 shadow-[0_0_15px_rgba(0,170,220,0.05)]">
+
+<div class="max-w-container-max mx-auto px-gutter py-4 flex justify-between items-center">
+
+<div class="font-h2 text-h2 font-bold tracking-tighter text-on-surface">
+Nimbus
+</div>
+
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-primary font-bold border-b-2 border-primary pb-1" href="/">Home</a>
+<a class="text-[#5b6972] font-medium hover:text-primary transition-all duration-300" href="/about_nimbus/">About</a>
+<a class="text-[#5b6972] font-medium hover:text-primary transition-all duration-300" href="/master_plan_nimbus/">Master Plan</a>
+</nav>
+
+<a class="bg-primary text-white px-6 py-2 rounded font-label-caps uppercase tracking-widest glow-hover transition-all active:scale-95 duration-150" href="https://nimbusaiengine.vercel.app/" target="_blank">
+Launch AI Engine
+</a>
+
+</div>
+</header>
+
+<main>
+
+<section class="relative min-h-screen flex flex-col items-center justify-center text-center px-gutter pt-20 overflow-hidden">
+
+<div class="absolute inset-0 z-0">
+
+<div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop')] bg-cover bg-center opacity-10 mix-blend-multiply"></div>
+
+<div class="absolute inset-0 atmospheric-bg"></div>
+
+</div>
+
+<div class="relative z-10 max-w-4xl space-y-6">
+
+<span class="font-label-caps text-primary tracking-[0.4em] uppercase text-[10px]">
+Planetary Infrastructure Phase 01
+</span>
+
+<h1 class="font-display-lg text-display-lg text-on-surface leading-tight">
+Water access for every human on Earth
+</h1>
+
+<p class="font-body-editorial text-body-editorial text-[#5b6972] max-w-2xl mx-auto">
+Nimbus is engineering a future where atmospheric moisture is harnessed through advanced MOF systems to deliver clean water anywhere on the planet.
+</p>
+
+<div class="pt-8 flex flex-col sm:flex-row gap-4 justify-center">
+
+<a class="bg-primary text-white px-10 py-4 rounded font-label-caps uppercase tracking-widest glow-hover transition-all duration-300 flex items-center gap-2" href="#vision">
+Initialize Vision
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+
+<button class="glass-panel text-on-surface px-10 py-4 rounded font-label-caps uppercase tracking-widest hover:border-primary-container/50 transition-all duration-300">
+Technical Specs
+</button>
+
+</div>
+</div>
+</section>
+
+<section class="py-24 px-gutter bg-white">
+
+<div class="max-w-5xl mx-auto text-center space-y-12">
+
+<div class="space-y-4">
+<h2 class="font-h1 text-h1 text-on-surface">
+Manifesto: The Future of Water
+</h2>
+
+<div class="h-1 w-24 bg-primary mx-auto"></div>
+</div>
+
+<div class="relative group aspect-video rounded-xl overflow-hidden glass-panel p-2">
+
+<iframe
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowfullscreen
+class="w-full h-full rounded-lg"
+frameborder="0"
+referrerpolicy="strict-origin-when-cross-origin"
+src="https://www.youtube.com/embed/74dg339zKSM"
+title="Nimbus Manifesto">
+</iframe>
+
+</div>
+
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 pt-12">
+
+<div class="text-center">
+<div class="font-h2 text-primary">2.2B</div>
+<div class="font-label-caps text-[#5b6972] text-[10px]">
+PEOPLE WITHOUT WATER
+</div>
+</div>
+
+<div class="text-center">
+<div class="font-h2 text-primary">12.9Qa</div>
+<div class="font-label-caps text-[#5b6972] text-[10px]">
+ATMOSPHERIC LITRES
+</div>
+</div>
+
+<div class="text-center">
+<div class="font-h2 text-primary">0.02</div>
+<div class="font-label-caps text-[#5b6972] text-[10px]">
+ENERGY KW/L
+</div>
+</div>
+
+<div class="text-center">
+<div class="font-h2 text-primary">100%</div>
+<div class="font-label-caps text-[#5b6972] text-[10px]">
+AUTONOMOUS SYSTEM
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="py-32 px-gutter relative overflow-hidden" id="vision">
+
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row items-center gap-16">
+
+<div class="flex-1 space-y-8">
+
+<div class="font-label-caps text-surface-tint uppercase tracking-[0.2em] flex items-center gap-4">
+<span class="w-8 h-[1px] bg-surface-tint"></span>
+THE VISION
+</div>
+
+<h2 class="font-display-lg text-h1 text-on-surface">
+The Vision of Atmospheric Abundance
+</h2>
+
+<div class="font-body-editorial text-body-editorial text-[#5b6972] space-y-6">
+
+<p>
+Water scarcity is not a supply problem; it is an infrastructure and location problem.
+Earth's atmosphere holds over 12.9 trillion tons of renewable fresh water at any given moment.
+</p>
+
+<p>
+Nimbus leverages Metal-Organic Frameworks (MOFs) — programmable materials engineered at the molecular level.
+</p>
+
+<p>
+Our vision is to decentralize water production and remove reliance on centralized infrastructure.
+</p>
+
+</div>
+
+<div class="pt-4">
+
+<a class="inline-flex items-center gap-4 bg-primary text-white font-label-caps uppercase tracking-widest px-8 py-4 rounded glow-hover transition-all duration-300" href="https://nimbusaiengine.vercel.app/" target="_blank">
+
+Access AI Engine
+
+<span class="material-symbols-outlined">
+rocket_launch
+</span>
+
+</a>
+
+</div>
+</div>
+
+<div class="flex-1 w-full relative">
+
+<div class="glass-panel aspect-square rounded-full p-8 relative overflow-hidden flex items-center justify-center">
+
+<div class="absolute inset-0 opacity-20">
+
+<img class="w-full h-full object-cover rounded-full"
+src="https://lh3.googleusercontent.com/aida-public/AB6AXuCR1xkIjWt9Epy5fJCZBKLAHURyMi19QcEMOaBArVrgEC6LeeNAe1g-P3SocKZzPH-8haEqfusJwmhD7KcpRPuUp8gaymlCPWjK9zV1XIMF3xfSXe71-DmdtzGsN9xr34ul2omAWVOakSLJdS8uLvXnoohg2N8I76r8poZvQocJeRyP_kwqtrY7jukHy3onBWT2i2l8dlB-pXxA3Ko6pv8Q0cbeXUOP-2ed0JPHeN4JETrc7_kXfiRN8AVajGIfYTD_sxdJfzIgUnI">
+
+</div>
+
+<div class="relative z-10 w-full h-full border-2 border-primary/20 rounded-full animate-pulse flex items-center justify-center">
+
+<div class="text-center">
+
+<span class="material-symbols-outlined text-[64px] text-primary" style="font-variation-settings: 'FILL' 1;">
+water_drop
+</span>
+
+<div class="mt-2 font-label-caps text-on-surface text-[12px] tracking-[0.3em]">
+H2O HARVESTING
+</div>
+
+</div>
+</div>
+</div>
+
+<div class="absolute top-0 right-0 glass-panel p-4 rounded-xl border-primary/30 max-w-[200px]">
+
+<div class="flex items-center gap-2 mb-2">
+
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+
+<span class="font-label-caps text-[10px] text-primary">
+MOF-901 ACTIVE
+</span>
+
+</div>
+
+<p class="font-body-ui text-[12px] text-[#5b6972]">
+Lattice structural integrity confirmed.
+Equilibrium moisture capacity at 94% efficiency.
+</p>
+
+</div>
+</div>
+</div>
+</section>
+
+<section class="py-32 px-gutter bg-[#eef4f8]">
+
+<div class="max-w-4xl mx-auto glass-panel p-16 rounded-2xl text-center space-y-8 relative overflow-hidden">
+
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary-container to-transparent"></div>
+
+<h2 class="font-h1 text-h1 text-on-surface">
+Ready to engineer the future?
+</h2>
+
+<p class="font-body-editorial text-[#5b6972] max-w-xl mx-auto">
+Simulate atmospheric conditions and calculate MOF yields for your region using our advanced planetary engine.
+</p>
+
+<div class="pt-4">
+
+<a class="inline-block bg-primary text-white px-12 py-5 rounded-lg font-label-caps uppercase tracking-widest text-h2 glow-hover transition-all duration-300" href="https://nimbusaiengine.vercel.app/" target="_blank">
+Launch AI Engine
+</a>
+
+</div>
+
+</div>
+</section>
+
+</main>
+
+<footer class="w-full px-margin-page py-12 grid grid-cols-1 md:grid-cols-4 gap-8 max-w-container-max mx-auto border-t border-black/5 bg-[#f2f7fa]">
+
+<div class="col-span-1 md:col-span-1 space-y-4">
+
+<div class="font-h2 text-h2 font-bold text-on-surface">
+Nimbus
+</div>
+
+<p class="font-body-ui text-[14px] text-[#5b6972] opacity-80">
+Atmospheric harvesting systems for planetary-scale abundance.
+</p>
+
+</div>
+
+<div class="space-y-4">
+
+<h4 class="font-label-caps text-primary uppercase tracking-widest text-[11px]">
+Ecosystem
+</h4>
+
+<ul class="space-y-2">
+
+<li>
+<a class="font-body-ui text-[14px] text-[#5b6972] hover:text-primary transition-colors" href="#">
+Network
+</a>
+</li>
+
+<li>
+<a class="font-body-ui text-[14px] text-[#5b6972] hover:text-primary transition-colors" href="#">
+Status
+</a>
+</li>
+
+<li>
+<a class="font-body-ui text-[14px] text-[#5b6972] hover:text-primary transition-colors" href="#">
+Protocols
+</a>
+</li>
+
+</ul>
+</div>
+
+<div class="space-y-4">
+
+<h4 class="font-label-caps text-primary uppercase tracking-widest text-[11px]">
+Governance
+</h4>
+
+<ul class="space-y-2">
+
+<li>
+<a class="font-body-ui text-[14px] text-[#5b6972] hover:text-primary transition-colors" href="#">
+Privacy Policy
+</a>
+</li>
+
+<li>
+<a class="font-body-ui text-[14px] text-[#5b6972] hover:text-primary transition-colors" href="#">
+Terms of Service
+</a>
+</li>
+
+<li>
+<a class="font-body-ui text-[14px] text-[#5b6972] hover:text-primary transition-colors" href="#">
+Contact
+</a>
+</li>
+
+</ul>
+</div>
+
+<div class="space-y-4">
+
+<h4 class="font-label-caps text-primary uppercase tracking-widest text-[11px]">
+Intelligence
+</h4>
+
+<a class="block glass-panel p-4 rounded hover:border-primary transition-all active:opacity-80" href="https://nimbusaiengine.vercel.app/" target="_blank">
+
+<span class="font-label-caps text-[10px] text-primary block mb-1">
+CURRENT STATUS
+</span>
+
+<span class="text-on-surface font-body-ui text-[12px]">
+AI Engine Online
+</span>
+
+</a>
+</div>
+
+<div class="col-span-1 md:col-span-4 pt-12 border-t border-black/5 flex flex-col md:flex-row justify-between items-center gap-4">
+
+<p class="font-body-ui text-label-caps uppercase tracking-widest text-[#5b6972] text-[10px]">
+© 2026 Nimbus Infrastructure Group. All rights reserved.
+</p>
+
+<div class="flex gap-6">
+
+<span class="material-symbols-outlined text-[#5b6972] hover:text-primary cursor-pointer text-[20px]">
+terminal
+</span>
+
+<span class="material-symbols-outlined text-[#5b6972] hover:text-primary cursor-pointer text-[20px]">
+public
+</span>
+
+<span class="material-symbols-outlined text-[#5b6972] hover:text-primary cursor-pointer text-[20px]">
+hub
+</span>
+
+</div>
+</div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About | Nimbus Infrastructure Group</title>
+
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;700&family=Newsreader:ital,wght@0,400;1,400&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+<script id="tailwind-config">
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "surface-variant": "#d9e3e8",
+        "on-background": "#142028",
+        "surface-tint": "#00aee6",
+        "tertiary-container": "#ffd37a",
+        "on-secondary": "#ffffff",
+        "secondary-container": "#d9ebff",
+        "on-error": "#ffffff",
+        "surface-container-low": "#f4f8fb",
+        "on-tertiary": "#4d3200",
+        "primary-fixed": "#dff7ff",
+        "error-container": "#ffdad6",
+        "on-error-container": "#410002",
+        "tertiary": "#8a5a00",
+        "on-primary-container": "#003847",
+        "surface-dim": "#edf3f7",
+        "surface-container-high": "#e7eef3",
+        "surface-container-lowest": "#ffffff",
+        "inverse-surface": "#1e2a31",
+        "tertiary-fixed": "#ffe2b7",
+        "primary-fixed-dim": "#84dfff",
+        "on-secondary-fixed-variant": "#23486b",
+        "on-secondary-container": "#163654",
+        "tertiary-fixed-dim": "#ffc85a",
+        "on-primary": "#ffffff",
+        "inverse-on-surface": "#f2f7fa",
+        "on-tertiary-container": "#6e4700",
+        "on-secondary-fixed": "#10253a",
+        "outline-variant": "#c7d3da",
+        "on-surface-variant": "#5b6972",
+        "error": "#ba1a1a",
+        "on-primary-fixed": "#001f28",
+        "surface-container-highest": "#dde7ed",
+        "on-primary-fixed-variant": "#005d75",
+        "inverse-primary": "#7adfff",
+        "secondary-fixed": "#eaf2ff",
+        "surface-container": "#eef4f8",
+        "surface-bright": "#ffffff",
+        "surface": "#f7fbfd",
+        "on-tertiary-fixed": "#291800",
+        "on-tertiary-fixed-variant": "#6a4300",
+        "primary-container": "#00c8ff",
+        "on-surface": "#142028",
+        "background": "#f7fbfd",
+        "secondary-fixed-dim": "#bfd8ff",
+        "secondary": "#4a89d9",
+        "primary": "#009fd1",
+        "outline": "#92a3ad"
+      },
+
+      borderRadius: {
+        "DEFAULT": "0.125rem",
+        "lg": "0.25rem",
+        "xl": "0.5rem",
+        "full": "0.75rem"
+      },
+
+      spacing: {
+        "container-max": "1440px",
+        "gutter": "24px",
+        "unit": "8px",
+        "margin-page": "64px"
+      },
+
+      fontFamily: {
+        "body-ui": ["Manrope"],
+        "body-editorial": ["Newsreader"],
+        "label-caps": ["Space Grotesk"],
+        "h1": ["Space Grotesk"],
+        "h2": ["Space Grotesk"],
+        "display-lg": ["Space Grotesk"]
+      }
+    }
+  }
+}
+</script>
+
+<style>
+
+body {
+  background-color: #f7fbfd;
+  color: #142028;
+  -webkit-font-smoothing: antialiased;
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(24px);
+  border: 1px solid rgba(255,255,255,0.7);
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.05),
+    0 1px 2px rgba(0,0,0,0.04);
+}
+
+.glow-hover:hover {
+  box-shadow: 0 10px 30px rgba(0, 170, 220, 0.18);
+}
+
+.atmospheric-gradient {
+  background:
+    radial-gradient(circle at 50% 50%,
+    rgba(0,200,255,0.10) 0%,
+    transparent 70%);
+}
+
+.text-glow {
+  text-shadow: 0 0 12px rgba(0,180,255,0.12);
+}
+
+</style>
+</head>
+
+<body class="bg-background text-on-background font-body-ui">
+
+<div class="fixed inset-0 pointer-events-none opacity-[0.03] mix-blend-multiply z-[999]">
+  <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
+</div>
+
+<header class="fixed top-0 left-0 w-full z-50 bg-white/70 backdrop-blur-xl border-b border-black/5 shadow-[0_0_15px_rgba(0,170,220,0.05)]">
+
+<div class="max-w-container-max mx-auto flex justify-between items-center px-gutter py-4">
+
+<div class="font-h2 text-h2 font-bold tracking-tighter text-on-surface">
+Nimbus
+</div>
+
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-[#5b6972] font-medium hover:text-primary transition-all duration-300" href="/">Home</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1" href="/about_nimbus/">About</a>
+<a class="text-[#5b6972] font-medium hover:text-primary transition-all duration-300" href="/master_plan_nimbus/">Master Plan</a>
+</nav>
+
+<a class="bg-primary text-white font-label-caps px-6 py-2 rounded-lg glow-hover transition-transform active:scale-95 duration-150" href="https://nimbusaiengine.vercel.app/" target="_blank">
+Launch AI Engine
+</a>
+
+</div>
+</header>
+
+<main class="pt-32 pb-24 overflow-x-hidden">
+
+<section class="max-w-container-max mx-auto px-gutter mb-24 relative">
+
+<div class="absolute -top-24 left-1/2 -translate-x-1/2 w-full h-[600px] atmospheric-gradient pointer-events-none"></div>
+
+<div class="relative z-10 text-center max-w-4xl mx-auto">
+
+<span class="font-label-caps text-primary tracking-[0.3em] uppercase">
+Atmospheric Infrastructure
+</span>
+
+<h1 class="font-display-lg text-display-lg mb-8 text-on-surface">
+About Nimbus
+</h1>
+
+<p class="font-body-editorial text-body-editorial text-[#5b6972] mb-12 leading-relaxed">
+Nimbus is a deep-tech company engineering the future of global water security. We turn atmospheric moisture into infrastructure using MOFs and AI systems.
+</p>
+
+<div class="flex flex-wrap justify-center gap-4">
+
+<a class="bg-primary text-white px-8 py-4 font-label-caps tracking-widest flex items-center gap-2 glow-hover" href="https://nimbusaiengine.vercel.app/" target="_blank">
+RUN SIMULATION
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</a>
+
+<a class="border border-black/10 text-on-surface px-8 py-4 font-label-caps tracking-widest hover:border-primary transition-all" href="https://nimbusaiengine.vercel.app/" target="_blank">
+OPEN AI ENGINE
+</a>
+
+</div>
+</div>
+</section>
+
+<section class="max-w-container-max mx-auto px-gutter mb-24">
+
+<div class="grid grid-cols-12 gap-gutter">
+
+<div class="col-span-12 mb-8">
+<h2 class="font-h1 text-h1 text-on-surface">The Intelligence Layer</h2>
+<p class="text-[#5b6972] max-w-2xl">
+AI optimizes every step of atmospheric water harvesting—from materials to deployment.
+</p>
+</div>
+
+<div class="col-span-12 md:col-span-7 glass-panel p-8 rounded-xl">
+
+<span class="font-label-caps text-primary">01 / GEOSPATIAL INTELLIGENCE</span>
+
+<h3 class="font-h2 text-h2 mt-4 mb-4">Location Analysis</h3>
+
+<p class="text-[#5b6972] mb-6">
+We analyze satellite + climate data to find optimal deployment zones.
+</p>
+
+</div>
+
+<div class="col-span-12 md:col-span-5 glass-panel p-8 rounded-xl">
+
+<span class="font-label-caps text-primary">02 / SENSORY MAPPING</span>
+
+<h3 class="font-h2 text-h2 mt-4 mb-4">Climate Tracking</h3>
+
+<p class="text-[#5b6972]">
+Real-time humidity and temperature optimization for efficiency.
+</p>
+
+</div>
+
+<div class="col-span-12 md:col-span-4 glass-panel p-8 rounded-xl">
+
+<span class="font-label-caps text-primary">03 / NANOTECH</span>
+
+<h3 class="font-h2 text-h2 mt-4 mb-4">MOF Selection</h3>
+
+<p class="text-[#5b6972]">
+AI selects best molecular structures per climate zone.
+</p>
+
+</div>
+
+<div class="col-span-12 md:col-span-8 glass-panel p-8 rounded-xl">
+
+<span class="font-label-caps text-primary">04 / OUTPUT FORECASTING</span>
+
+<h3 class="font-h2 text-h2 mt-4 mb-4">Yield Prediction</h3>
+
+<p class="text-[#5b6972]">
+Predicts water output with high accuracy using environmental models.
+</p>
+
+</div>
+
+</div>
+</section>
+
+<section class="max-w-3xl mx-auto px-gutter mb-24 text-center">
+
+<div class="h-[1px] w-24 bg-primary mx-auto mb-12"></div>
+
+<h4 class="font-h2 text-h2 italic text-on-surface mb-6">
+"We are building an intelligent atmosphere for the next era of humanity."
+</h4>
+
+<p class="text-[#5b6972] uppercase tracking-widest text-[10px]">
+— Nimbus Research Team
+</p>
+
+</section>
+
+</main>
+
+<footer class="bg-[#f2f7fa] border-t border-black/5 py-12">
+
+<div class="max-w-container-max mx-auto px-margin-page grid grid-cols-1 md:grid-cols-4 gap-8">
+
+<div>
+<div class="font-h2 text-h2 font-bold text-on-surface mb-4">Nimbus</div>
+<p class="text-[#5b6972] text-sm">
+Industrial atmospheric infrastructure for water abundance.
+</p>
+</div>
+
+<div class="flex flex-col gap-3">
+<span class="font-label-caps text-primary">RESOURCES</span>
+<a class="text-[#5b6972] hover:text-primary text-[12px] uppercase" href="#">Docs</a>
+<a class="text-[#5b6972] hover:text-primary text-[12px] uppercase" href="#">API</a>
+</div>
+
+<div class="flex flex-col gap-3">
+<span class="font-label-caps text-primary">COMPANY</span>
+<a class="text-[#5b6972] hover:text-primary text-[12px] uppercase" href="#">About</a>
+<a class="text-[#5b6972] hover:text-primary text-[12px] uppercase" href="#">Careers</a>
+</div>
+
+<div class="flex flex-col gap-3">
+<span class="font-label-caps text-primary">LEGAL</span>
+<a class="text-[#5b6972] hover:text-primary text-[12px] uppercase" href="#">Privacy</a>
+<a class="text-[#5b6972] hover:text-primary text-[12px] uppercase" href="#">Terms</a>
+</div>
+
+</div>
+
+</footer>
+
+</body>
+</html>

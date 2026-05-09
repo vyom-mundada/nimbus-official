@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Nimbus | Our Master Plan</title>
+
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        background: "#f6f9fc",
+        surface: "#ffffff",
+        surfaceAlt: "#eef4f8",
+        text: "#0f172a",
+        muted: "#475569",
+
+        primary: "#0ea5e9",
+        primarySoft: "#bae6fd",
+        border: "#e2e8f0"
+      },
+      fontFamily: {
+        body: ["Manrope"],
+        display: ["Space Grotesk"],
+        editorial: ["Newsreader"]
+      }
+    }
+  }
+}
+</script>
+
+<style>
+.glass-panel {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(14, 165, 233, 0.15);
+}
+
+.glow {
+  box-shadow: 0 0 20px rgba(14, 165, 233, 0.15);
+}
+
+.text-glow {
+  text-shadow: 0 0 10px rgba(14, 165, 233, 0.2);
+}
+
+body {
+  background: #f6f9fc;
+  color: #0f172a;
+}
+</style>
+</head>
+
+<body class="font-body">
+
+<!-- NAV -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur border-b border-border">
+<div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+<div class="font-bold text-xl text-primary">Nimbus</div>
+
+<div class="hidden md:flex gap-8 text-sm">
+<a href="/" class="text-muted hover:text-primary">Home</a>
+<a href="/about_nimbus/" class="text-muted hover:text-primary">About</a>
+<a href="/master_plan_nimbus/" class="text-primary font-semibold border-b-2 border-primary pb-1">Master Plan</a>
+</div>
+
+<a href="https://nimbusaiengine.vercel.app/"
+class="bg-primary text-white px-5 py-2 rounded-lg text-xs uppercase tracking-widest hover:opacity-90">
+Launch AI Engine
+</a>
+</div>
+</nav>
+
+<!-- HERO -->
+<header class="pt-40 pb-24 text-center px-6">
+<div class="max-w-4xl mx-auto">
+
+<span class="text-xs uppercase tracking-[0.3em] text-primary">The Manifesto</span>
+
+<h1 class="text-5xl md:text-6xl font-display font-bold mt-6 text-glow">
+Nimbus: Our Master Plan
+</h1>
+
+<p class="mt-8 text-lg italic text-muted font-editorial">
+"Unlocking access to life’s most essential resource, empowering every community to thrive."
+</p>
+
+<div class="mt-8 flex flex-wrap justify-center gap-3 text-xs uppercase tracking-widest text-muted">
+<span>Yash</span><span>•</span>
+<span>Vyom</span><span>•</span>
+<span>Terrence</span><span>•</span>
+<span>Precious</span>
+<span class="text-primary ml-2">— Founders</span>
+</div>
+
+</div>
+</header>
+
+<main class="max-w-4xl mx-auto px-6 space-y-32 pb-32">
+
+<!-- P1 -->
+<section>
+<h2 class="text-3xl font-display mb-6 text-primary">01 — Introduction</h2>
+
+<div class="space-y-5 text-muted leading-relaxed">
+<p>The water crisis is not a resource problem. Earth has more than enough water.</p>
+
+<div class="glass-panel p-6 border-l-4 border-primary">
+<p class="italic text-slate-700">
+For a century, water infrastructure depended on geography — rivers, aquifers, coastlines.
+</p>
+</div>
+
+<p>2.1 billion people still lack access to clean water, not because it doesn't exist, but because we never built systems to extract it from air.</p>
+
+<p class="text-primary font-semibold">
+That changes now.
+</p>
+</div>
+</section>
+
+<!-- P2 -->
+<section>
+<h2 class="text-3xl font-display mb-6 text-primary">02 — The Science</h2>
+
+<div class="grid md:grid-cols-2 gap-8 text-muted leading-relaxed">
+<div>
+<p>Metal-Organic Frameworks (MOFs) are engineered materials with ultra-high surface area capable of capturing water molecules from air.</p>
+<p class="mt-4">They can extract water even at very low humidity using solar heat regeneration.</p>
+</div>
+
+<div class="glass-panel p-6">
+<div class="text-xs uppercase text-primary mb-4">Specs</div>
+<p><b>MOF-303</b>: 0.7–1.0 L/kg/day</p>
+<p><b>Activation</b>: 10% humidity</p>
+<p><b>Temp</b>: 60–80°C</p>
+</div>
+</div>
+</section>
+
+<!-- P3 -->
+<section>
+<h2 class="text-3xl font-display mb-6 text-primary">03 — What We’re Building</h2>
+
+<div class="space-y-6 text-muted">
+<p>Modular atmospheric water units that generate up to 5,000 litres per day using air and sunlight.</p>
+
+<div class="glass-panel p-6">
+<p class="text-primary font-semibold">
+AI selects optimal MOF configuration based on local climate data.
+</p>
+</div>
+</div>
+</section>
+
+<!-- P4 -->
+<section>
+<h2 class="text-3xl font-display mb-6 text-primary">04 — Market</h2>
+
+<div class="grid md:grid-cols-3 gap-6 text-muted">
+<div class="glass-panel p-5">
+<h3 class="text-primary font-semibold">Hardware</h3>
+<p>$8K–$50K systems</p>
+</div>
+
+<div class="glass-panel p-5">
+<h3 class="text-primary font-semibold">WaaS</h3>
+<p>Water at $0.01–$0.03/L</p>
+</div>
+
+<div class="glass-panel p-5">
+<h3 class="text-primary font-semibold">Licensing</h3>
+<p>AI optimization SaaS</p>
+</div>
+</div>
+</section>
+
+<!-- P5 -->
+<section>
+<h2 class="text-3xl font-display mb-6 text-primary">05 — Why Now</h2>
+
+<ul class="space-y-4 text-muted">
+<li>MOFs are now commercially viable</li>
+<li>Costs are rapidly decreasing</li>
+<li>AI optimization gap remains unsolved</li>
+<li>Water infrastructure is outdated</li>
+<li>No dominant software layer exists</li>
+</ul>
+</section>
+
+<!-- P6 -->
+<section>
+<h2 class="text-3xl font-display mb-6 text-primary">06 — Roadmap</h2>
+
+<div class="grid md:grid-cols-4 gap-4 text-sm">
+<div class="glass-panel p-4">
+<b>Phase 1</b><br>Field validation
+</div>
+<div class="glass-panel p-4">
+<b>Phase 2</b><br>Cost reduction
+</div>
+<div class="glass-panel p-4">
+<b>Phase 3</b><br>Global scaling
+</div>
+<div class="glass-panel p-4">
+<b>Phase 4</b><br>Infrastructure network
+</div>
+</div>
+</section>
+
+<!-- CLOSE -->
+<section class="text-center pt-20 border-t border-border">
+<p class="text-xl italic text-muted">
+The only question is execution speed.
+</p>
+<p class="text-4xl mt-6 text-primary font-display text-glow">
+We intend to move.
+</p>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="border-t border-border py-10 text-center text-xs text-muted">
+Nimbus Infrastructure Group © 2024
+</footer>
+
+</body>
+</html>
